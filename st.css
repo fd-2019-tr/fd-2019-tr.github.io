@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-image: url(bg.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+section {
+		border: 3px solid white;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+}
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    background-color: black;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+    background-color: white;
+    border: 1px solid transparent;
+}
+ul.submenu > li {
+    display: block;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: line-through;
+}
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+
+/* Треугольник */
+.submenu {
+   background: gray;
+   border: 3px solid white;
+   border-radius: 5px;
+   position: relative;
+   padding: 5px;
+   width: 300px;
+   text-align: center;
+   margin-top: 10px;
+}
+ 
+.submenu:after,
+.submenu:before {
+   content: '';
+   border: solid transparent;
+   position: absolute;
+   left: 50%;
+   margin-left: -12px;
+   top: -24px;
+   width: 0;
+}
+.submenu:before {
+   border-bottom-color: white;
+   border-width: 12px;
+}
+.submenu:after {
+   border-bottom-color: gray;
+   border-width: 16px;
+   margin-left: -16px;
+}
+
+   
+
